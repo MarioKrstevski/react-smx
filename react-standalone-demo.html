@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <h1>Welcome</h1>
+    </div>
+
+    <script>
+      const root = document.getElementById("root");
+      const h1El = document.createElement("h1");
+      h1El.innerText = "Welcome";
+      h1El.id = "h1naslov";
+      root.append(h1El);
+
+      h1El.innerText = "Zdravo";
+      const reactEl = React.createElement(
+        "h1",
+        {
+          className: "h1Naslov",
+        },
+        "Welcome",
+        React.createElement(
+          "p",
+          {},
+          "Lorem",
+          React.createElement(
+            "a",
+            {},
+            React.createElement("img", {}, "Lorem")
+          )
+        )
+      );
+      console.log(reactEl);
+      console.log(h1El);
+    </script>
+
+    <script type="text/babel">
+      //   const reactEl = React.createElement("h1", {}, "Welcome");
+      //   console.log(reactEl);
+    </script>
+  </body>
+</html>

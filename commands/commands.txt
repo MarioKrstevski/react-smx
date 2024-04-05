@@ -1,0 +1,23 @@
+By installing NodeJS we get
+
+node
+npm - node package manager (add/remove .js files(modules/libraries/packages))
+npx - executor (executes a commands)
+
+We type the commands in terminal - Terminal - New Terminal (zsh,bash,cmd)
+
+npx create-react-app [project-name]
+- generates a lot of files to create enviroment for development
+
+package.json (file that holds all imporant information about the project)
+- it is used to recreate the project
+
+node_modules - a lot of .js files that do their own specific thing which we use
+
+
+We publish the project on github
+
+git push - upload
+git pull - download
+
+

@@ -1,6 +1,6 @@
 import Header from "./Header";
 
-export default function Cuips(props) {
+export default function Cruip(props) {
   return (
     <div>
       <Header />

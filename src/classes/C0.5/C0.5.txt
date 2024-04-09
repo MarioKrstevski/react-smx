@@ -1,0 +1,9 @@
+How to setup enviroment with CRA (create-react-app)
+
+https://create-react-app.dev/
+
+Explaining what each part does
+
+Take a look at Slide 22 
+
+https://docs.google.com/presentation/d/1cTthMKK7WrnMzar_IGwC86opgZ1QHZAUIYWfJoKmX3Q/edit#slide=id.g2413a93b197_0_119

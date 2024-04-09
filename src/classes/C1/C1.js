@@ -1,18 +1,17 @@
 /*
 Topic:
 
-Making components, 
-how components work, 
-when do we use them, 
-component composition
-
+- Creating components, 
+- How components work, 
+- When do we use them, 
+- Component composition
 
 
 */
 
-import Logo from "../components/Logo";
-import Settings from "../components/Settings";
-import GSHeader from "../components/GSHeader";
+import Logo from "../../components/Logo";
+import Settings from "../../components/Settings";
+import GSHeader from "../../components/GSHeader";
 
 // JSX
 function Heading1() {

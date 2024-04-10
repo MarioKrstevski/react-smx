@@ -7,7 +7,7 @@ function ListAndKeys() {
       {items.map((number, index) => (
         // adding a key prop, is like adding an ID that react understand so that it can easily keep track of a component
         // otherwise it will rerender everything
-        <div key={number}>{number}</div>
+        <div key={index}>{number}</div>
       ))}
     </div>
   );
@@ -35,18 +35,25 @@ function List(props) {
 }
 
 export default function Lists() {
-  const predefinedArray = [["one", "two", "three"]];
+  const predefinedArray = ["one", "two", "three", "fourth"];
   return (
     <>
-      {"one"}
+      {/* {"onee"}
       {"two"}
-      {"three"}
-      {/* is equivalent to */}
-      {["one", "two", "three"]}
-      {predefinedArray}
+      {"three"} */}
 
-      <List items={predefinedArray} />
-      <ListAndKeys />
+      {/* is equivalent to */}
+
+      {/* {["one", "two", "three"]} */}
+
+      {/* {predefinedArray} */}
+
+      {/* <List items={predefinedArray} /> */}
+
+      {/* <ListAndKeys /> */}
+      {/* 
+
+       */}
 
       {/* TODO: Nested lists, separator in between */}
     </>

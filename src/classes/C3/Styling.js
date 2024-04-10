@@ -17,12 +17,22 @@ Ideally you should use tailwind since its the new hot thing
 import "./C3style.css";
 import C3styles from "./C3.module.css";
 
+<html></html>;
 export default function Styling(props) {
+  const styleObject = {
+    color: "pink",
+    width: 100,
+    height: "6rem",
+    backgroundColor: "red",
+    border: "1px solid bold",
+    borderRadius: true ? "3px" : "10px",
+  };
   return (
     <div>
       {/* style="atr:value; atr2:value2" becomes */}
-      {/* style={{atr:getValue,atr2:value2}} */}
+      {/* style={{atr:value,atr2:value2}} */}
 
+      <div style={styleObject}>Style attribute</div>
       <div
         style={{
           color: "pink",
@@ -44,7 +54,7 @@ export default function Styling(props) {
 
       <div className={C3styles.moduleClass}>
         Modules (check my class name in html it should be{" "}
-        {C3styles.moduleClass})
+        {C3styles.moduleClass}){JSON.stringify(C3styles, 2, null)}
       </div>
     </div>
   );

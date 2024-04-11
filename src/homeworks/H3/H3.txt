@@ -1,0 +1,267 @@
+Домашно 3. (Deadline: 20 Април) 7дена 
+Задолжителни се задачи 1,7 и 11
+
+1. Create a component that is called SoftSkills that will showcase the skills a person
+has. 
+
+It will take a prop called `skills` that is an array of skills. 
+It should returna `h1` with the text "Soft Skills" and a unordered list of items(skills)
+under the `h1`.
+
+const softSkills = [
+  "Communication",
+  "Teamwork",
+  "Adaptability",
+  "Problem-solving",
+  "Time management"
+];
+
+-----
+
+2. Create a component that is called HardSkills that will showcase the skills a person
+has. 
+
+It will take a prop called `skills` that is an array of skills. 
+It should returna `h1` with the text "Hard Skills" and a ordered list of items(skills)
+under the `h1`.
+
+const hardSkills = [
+  "Programming",
+  "Data analysis",
+  "Graphic design",
+  "Project management",
+  "Foreign language proficiency"
+];
+
+-----
+3. Create a component that is called MySKills that will showcase the skills a person
+has. It will take two props `softSkills` and `hardSkills` which are arrays.  And 
+also a prop `bio` which is a string.
+
+The output should be a `p` tag that has a small bio about a person. Underneath that
+there will be a `h1` with "Soft Skills" and then an unorderd list of items(skills), and
+after that a `h1` with the text "Hard Skills" and a ordered list of items(skills)
+under the `h1`.
+
+-----
+
+4. Create a component called `ManySkills` that will have a prop `skills` that is
+an array of objects that have a `name` and a `type`. Display it as a <ul> list.
+The types can be 'hard' and 'soft'. Make all the hard skills color red and all
+the soft skills color blue.
+
+const skills = [
+  { name: 'Communication', type: 'soft' },
+  { name: 'Teamwork', type: 'soft' },
+  { name: 'Adaptability', type: 'soft' },
+  { name: 'Problem-solving', type: 'soft' },
+  { name: 'Time management', type: 'soft' },
+  { name: 'Programming', type: 'hard' },
+  { name: 'Data analysis', type: 'hard' },
+  { name: 'Graphic design', type: 'hard' },
+  { name: 'Project management', type: 'hard' },
+  { name: 'Foreign language proficiency', type: 'hard' }
+]
+
+-----
+5. Create a component that is called DifferentSkills that will take in a prop `skills` which is big object
+that contains many skills in 3 categories (soft,hard,basic), it will render (show) 
+all three of them in format (h1 + ul) for each one just like the previous tasks. 
+With the correct name and skills inside. 
+
+Also the color for the hard skills will have to be red, for the soft - blue and
+for the basic - black (default)
+
+const skills = {
+  hard: [
+    "Programming",
+    "Data analysis",
+    "Graphic design",
+    "Project management",
+    "Foreign language proficiency"
+  ],
+  basic: [
+    "Reading",
+    "Writing",
+    "Mathematics",
+    "Digital Literacy",
+    "Critical Thinking",
+    "Problem-solving"
+  ],
+  soft: [
+    "Communication",
+    "Teamwork",
+    "Adaptability",
+    "Problem-solving",
+    "Time management"
+  ]
+};
+
+-----
+6. The same demands as in Task 5 (above) but this time the form of the `skill` prop.
+Will be an array of objects with a `name` and a `type` and there is only that one prop.
+
+The output should be like this 
+
+div
+    h1 - Hard Skills
+    ul
+        li - (hard skills items)
+
+
+    h1 - Soft Skills
+    ul
+        li - (soft skills items)
+
+    h1 - Basic Skills
+    ul
+        li - (basic skills items)
+
+
+const skills = [
+  { name: "Time management", type: "soft" },
+  { name: "Graphic design", type: "hard" },
+  { name: "Problem-solving", type: "soft" },
+  { name: "Programming", type: "hard" },
+  { name: "Teamwork", type: "soft" },
+  { name: "Mathematics", type: "basic" },
+  { name: "Data analysis", type: "hard" },
+  { name: "Communication", type: "soft" },
+  { name: "Writing", type: "basic" },
+  { name: "Adaptability", type: "soft" },
+  { name: "Foreign language proficiency", type: "hard" },
+  { name: "Reading", type: "basic" },
+  { name: "Digital Literacy", type: "basic" },
+  { name: "Critical Thinking", type: "basic" },
+  { name: "Problem-solving", type: "basic" },
+  { name: "Project management", type: "hard" }
+];
+
+
+-----
+7. From the airbnb.com website, scroll a bit down and you will see the property cards.
+The task is to create a `Property` component that will return one of the places you see 
+Here is a screenshot of one (https://prnt.sc/t6qUk04Myz70). Use one image, no need to 
+focus on the carousel of images, one is enough.
+
+Create two versions, one where there are no props, it just returns a static text
+as is. And the second version where each part is being passed as a prop. Props 
+could be (imgSrc, location, closestTo, suggestedDate, rating, price, currency, isGuestFavorite)
+
+Additionally, use a class that you will have to create in a .css file for styling ever item
+except the ones marked with a red line/rectangle. For the ones in red, you must style them with
+inline styling using the `style` attribute.
+
+Feel free to inspect the Airbnb website in devTools to determin what styles should be used
+and how the html should look like. And you don't have to be very specific but it should be 
+close to it and look alike as much as it can.
+-----
+8. Try to make a component `AirbnbListings` that has a prop `listings`, and each display like(similar)
+to how Airbnb does it (aribnb.com). 
+
+Make it so if the price is above 100 the whole card should be in a red border.
+
+const imgSrc = "https://a0.muscache.com/im/pictures/prohost-api/Hosting-867240499588150656/original/6ed9fd08-ee22-4d4c-b143-dd14b802a47a.jpeg?im_w=720";
+
+const airbnbListings = [
+  {
+    imgSrc: imgSrc,
+    location: "Downtown Loft, New York City",
+    closestTo: "Times Square",
+    suggestedDate: "April 10-17",
+    rating: 4.8,
+    price: 150,
+    currency: "USD",
+    isGuestFavorite: true
+  },
+  {
+    imgSrc: imgSrc,
+    location: "Beach House, Malibu",
+    closestTo: "Malibu Beach",
+    suggestedDate: "April 11-16",
+    rating: 4.9,
+    price: 300,
+    currency: "USD",
+    isGuestFavorite: false
+  },
+  {
+    imgSrc: imgSrc,
+    location: "Cozy Cabin, Lake Tahoe",
+    closestTo: "Lake Tahoe",
+    suggestedDate: "April 12-15",
+    rating: 4.7,
+    price: 120,
+    currency: "USD",
+    isGuestFavorite: true
+  },
+  {
+    imgSrc: imgSrc,
+    location: "Luxury Villa, Santorini",
+    closestTo: "Santorini Caldera",
+    suggestedDate: "April 13-18",
+    rating: 4.9,
+    price: 500,
+    currency: "EUR",
+    isGuestFavorite: true
+  },
+  {
+    imgSrc: imgSrc,
+    location: "Rustic Cottage, Provence",
+    closestTo: "Provence Countryside",
+    suggestedDate: "April 14-19",
+    rating: 4.6,
+    price: 100,
+    currency: "EUR",
+    isGuestFavorite: false
+  }
+];
+
+-----
+9. Make a component `TwoButton` that will render two buttons ("Left" and "Right") inside a div. 
+It should take two props, `leftButtonStyle` and `rightButtonStyle` which will be used
+to pass the style object down to the corresponding button. Use inline styling.
+
+You can find button inspiration here (https://getcssscan.com/css-buttons-examples), Pick any two
+
+
+-----
+10. Create a button component `RandomButton` and using the javascript function
+Math.random() create random styles, play with font-size, border-radius, color,
+background-color, or anything else. 
+
+Feel free to use chatgpt to see how you can generate random values for each.
+
+The idea is with every refresh of the page, you should have a new button
+
+-----
+11. 
+Exercise: Create a Todo List App
+
+Instructions:
+
+1. Create a TodoList component that receives an array of todo items as props called `todos`.
+2. Each todo item should have a title, description, and a boolean indicating whether it's completed or not.
+3. Render each todo item in the list.
+4. Apply conditional styling to indicate whether a todo item is completed or not.
+5. If a todo item is completed, strike through its title.
+6. If a todo item is not completed, display it as normal.
+7. Provide a button to toggle the completion status of each todo item.
+
+8. Show the number of completed todos at the start in a div
+ex: div - Completed (5)
+
+const todos = [
+  { title: 'Learn React', description: 'Study React basics', completed: false },
+  { title: 'Build a Todo App', description: 'Create a simple Todo application', completed: true },
+  { title: 'Exercise', description: 'Go for a run', completed: false },
+  { title: 'Read a Book', description: 'Finish reading "The Great Gatsby"', completed: true },
+  { title: 'Write a Blog Post', description: 'Write about your favorite hobby', completed: false },
+  { title: 'Cook Dinner', description: 'Try out a new recipe', completed: false },
+  { title: 'Organize Desk', description: 'Declutter and tidy up your workspace', completed: false },
+  { title: 'Call a Friend', description: 'Catch up with an old friend', completed: true }
+];
+
+
+
+
+-----

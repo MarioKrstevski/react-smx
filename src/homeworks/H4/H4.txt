@@ -1,0 +1,71 @@
+1. Make a Counter component that has two buttons
+One button increments the counter by 2 and a
+second button that increments the counter by 2
+
+
+2. Make a Counter2 component that has an increment and decrement
+buttons. It also should take a prop `amount` which is a number.
+The counter should be updated by the amount value
+
+ex: if amount=5 , then `counter + 5` and `counter - 5`
+
+3. Make a Counter3 component that has an increment and decrement functionality
+It should not go above 30 and it should not go below 0.
+
+4. Make a LuckyCounter, that only increments by 1. Every time the counter
+number is divisible by 3 it should render(show) 'lucky' instead of the number
+
+5. Make a component called RevealText. It should take a prop `text` that
+is a string ex:"Superstar"
+
+Make a button that will have the text "Reveal" and when we click it it should
+show a letter from the text. If we click it enough times it should show the whole
+text. 
+
+ex: text is "Superstar" and with each click we will get 
+
+S
+Su
+Sup
+Supe
+Super
+Supers
+Superst
+Supersta
+Superstar
+
+Once it is revealed fully, additional text should appear underneath 
+"Word Revealed" with green text
+
+6. Make a component TV that is meant to represent TV channels. It takes a 
+prop `channels` which is an array of strings.
+
+const tvChannels = [
+  "ABC",
+  "CBS",
+  "NBC",
+  "FOX",
+  "CNN",
+  "Fox News",
+  "MSNBC",
+  "ESPN",
+  "BBC",
+  "HBO",
+  "Discovery Channel",
+  "National Geographic Channel",
+  "Netflix",  
+  "Hulu",     
+];
+
+In the beginning show the first channel (we start the TV ON) 
+
+Create a button that has the text "Next Channel" 
+
+When we click the button we should show the next channel (ABC -> CBS -> NBC -> ...)
+
+Extra: When it reaches the end the channels should start from start again
+just like a real TV does
+
+Extra: If the channel starts with the letter "N" or "F" it should have a bigger
+font 20px and the other should be font size 16px
+

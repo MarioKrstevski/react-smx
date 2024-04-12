@@ -1,7 +1,11 @@
+// Example usage
+const randomString = generateRandomString();
+console.log(randomString);
+
 function People() {
   const people = [
     {
-      id: 0,
+      id: uuid(),
       name: "Creola Katherine Johnson",
       profession: "mathematician",
     },
@@ -28,7 +32,7 @@ function People() {
   ];
 
   let listItems = people.map((person) => (
-    <li key={person.name}>
+    <li key={person.id}>
       <img
         src={
           "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?q=10&h=200"

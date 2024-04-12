@@ -1,7 +1,7 @@
 // JSX can return one item (string/component) or multiple (array of strings/components)
 
 function ListAndKeys() {
-  const items = [1, 2, 3, 4, 5];
+  const items = [1, 4, 3, 7, 5];
   return (
     <div>
       {items.map((number, index) => (
@@ -12,6 +12,20 @@ function ListAndKeys() {
     </div>
   );
 }
+function uuid() {
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let randomString = "";
+  for (let i = 0; i < 5; i++) {
+    randomString += characters.charAt(
+      Math.floor(Math.random() * characters.length)
+    );
+  }
+  return randomString;
+}
+
+console.log(uuid());
+
 function List(props) {
   // usually we don't want strings but we want components generated from the strings (data)
   // we do that with .map() and for each value we generate jsx

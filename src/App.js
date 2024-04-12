@@ -20,15 +20,56 @@ function UL({ items, title = "Default Title" }) {
   );
 }
 
+function Recipe({ name, id, ingredients }) {
+  return (
+    <div>
+      {name}
+      {id}
+      {ingredients}
+    </div>
+  );
+}
+
 function App() {
+  const recipe = {
+    id: "greek-salad",
+    name: "Greek Salad",
+    ingredients: ["tomatoes", "cucumber", "onion", "olives", "feta"],
+    nov: "nov",
+  };
+
+  const copyRecipe = { ...recipe };
+
+  const copy2 = {
+    id: "greek-salad",
+    name: "Greek Salad",
+    ingredients: ["tomatoes", "cucumber", "onion", "olives", "feta"],
+    nov: "nov",
+  };
+
+  // const name = "Greek Salad"
   return (
     <div className="App">
       {/* <C1 /> */}
       {/* <Cuips /> */}
       {/* <C2 /> */}
-      <C3 />
-      {/* <C4 /> */}
-
+      {/* <C3 /> */}
+      <C4 />
+      {/* {recipe.name} */}
+      {/* Greek Salad */}
+      {/* <Recipe
+        {...recipe}
+        nov={"nov"}
+        name={"Greek Salad"}
+        ingredients={[
+          "tomatoes",
+          "cucumber",
+          "onion",
+          "olives",
+          "feta",
+        ]}
+        id={"greek-salad"} */}
+      {/* /> */}
       {/* <UL items={celebrity_names} title={"celebrity names"} />
       <UL items={[1, 2, 3, 4]} />
       <UL items={[true, false]} />

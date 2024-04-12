@@ -132,9 +132,82 @@ const RandomButton = () => {
   return <button style={buttonStyle}>Random Button</button>;
 };
 
-export default function C3(props) {
+// old code
+// setTimeout(function () {
+//   document.getElementById("btn").addEventListener("click", () => {
+//     console.log("hi");
+//   });
+// }, 1000);
+function Task1(props) {
   return (
     <div>
+      <h2
+        onClick={() => {
+          console.log("heading clicked");
+        }}
+      >
+        Text
+      </h2>
+      <p
+        onMouseOver={() => {
+          console.log("paragraph hovered");
+        }}
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatem tempore praesentium placeat dignissimos quibusdam
+        explicabo!
+      </p>
+      <div
+        onClick={() => {
+          console.log("div clicked");
+        }}
+      >
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log("button1 clicked");
+          }}
+        >
+          btn1
+        </button>
+        <button
+          onClick={() => {
+            console.log("button2 clicked");
+          }}
+        >
+          btn2
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default function C3(props) {
+  function doSomething() {
+    console.log(5 + 10);
+    console.log(Date.now());
+  }
+  return (
+    <div>
+      <button
+        onClick={doSomething}
+        onMouseOver={function () {
+          console.log("i was hovered");
+        }}
+      >
+        Click
+      </button>
+
+      <div
+        onAnimationEnd={doSomething}
+        onMouseOut={doSomething}
+        onClickCapture={doSomething}
+        onPaste={doSomething}
+      >
+        Hover
+      </div>
+
       {/* <Lists /> */}
       {/* <Styling /> */}
       {/* 
@@ -149,7 +222,7 @@ export default function C3(props) {
       {/* Below this are exercises during class */}
       <hr />
 
-      <People listItems={people} />
+      {/* <People listItems={people} />
       <hr />
       <ShoppingList
         list={[
@@ -162,7 +235,7 @@ export default function C3(props) {
         ]}
       />
 
-      <RandomButton />
+      <RandomButton /> */}
     </div>
   );
 }

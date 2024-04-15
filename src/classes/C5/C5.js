@@ -1,12 +1,10 @@
 import React from "react";
 
-function Toggle() {
+function Toggle({ isOn, setIsOn }) {
   // let isOn = false;
   console.log("rendering Toggle");
   // localStorage.set()
   // api.textMyEx()
-
-  const [isOn, setIsOn] = React.useState(false);
 
   return (
     <div>
@@ -44,9 +42,11 @@ function Toggle() {
 
 function FocusMode() {
   // let isOpen = false;
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOn, setIsOn] = React.useState(false);
 
   console.log("rendering FocusMode");
-  const [isOpen, setIsOpen] = React.useState(false);
+
   return (
     <div>
       <button
@@ -62,14 +62,14 @@ function FocusMode() {
       {isOpen && (
         <div className="focus-dialog">
           <h1>Focus Mode</h1>
-          <Toggle />
+          <Toggle isOn={isOn} setIsOn={setIsOn} />
           <button>Start Focusing</button>
         </div>
       )}
 
       <div className={`focus-dialog ${isOpen ? "" : "hidden"}`}>
         <h1>Focus Mode</h1>
-        <Toggle />
+        <Toggle isOn={isOn} setIsOn={setIsOn} />
 
         <button>Start Focusing</button>
       </div>

@@ -69,3 +69,28 @@
 #searchtool {
   margin-left: auto;
 }
+
+.pomodoro {
+  display: flex;
+  gap: 8px;
+  border: 1px solid black;
+  width: 400px;
+}
+
+.pomodoro > div {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pomodoro .middle {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: start;
+}
+
+.pomodoro .end {
+  margin-left: auto;
+}

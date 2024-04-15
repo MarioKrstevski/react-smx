@@ -246,7 +246,6 @@ Instructions:
 5. If a todo item is completed, strike through its title.
 6. If a todo item is not completed, display it as normal.
 7. Provide a button to toggle the completion status of each todo item.
-
 8. Show the number of completed todos at the start in a div
 ex: div - Completed (5)
 

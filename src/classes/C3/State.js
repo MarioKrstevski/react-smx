@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 
-export default function State(props) {
+export default function State() {
   let initialValue = 0; //any value can be here
   const [state, setState] = React.useState(initialValue);
-
   const [counter, setCounter] = useState(0);
+
   return (
     <div>
       State

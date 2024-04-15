@@ -5,6 +5,7 @@ import C2 from "./classes/C2/C2";
 import Cuips from "./classes/C2/Cuisp";
 import C3 from "./classes/C3/C3";
 import C4 from "./classes/C4/C4";
+import C5 from "./classes/C5/C5";
 import { celebrity_names } from "./data/constants";
 
 function UL({ items, title = "Default Title" }) {
@@ -54,7 +55,8 @@ function App() {
       {/* <Cuips /> */}
       {/* <C2 /> */}
       {/* <C3 /> */}
-      <C4 />
+      {/* <C4 /> */}
+      <C5 />
       {/* {recipe.name} */}
       {/* Greek Salad */}
       {/* <Recipe

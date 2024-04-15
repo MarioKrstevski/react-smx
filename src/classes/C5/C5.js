@@ -16,7 +16,9 @@ function Toggle() {
               : "Focus for 45mins,rest for 15mins"}
           </div>
         </div>
-        <div className="end"> {isOn ? "On" : "Off"} </div>
+        <div className={`end`}>
+          <div className={`toggle-switch ${isOn ? "on" : ""}`}></div>
+        </div>
       </div>
 
       <button

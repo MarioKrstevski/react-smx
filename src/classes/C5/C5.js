@@ -6,7 +6,12 @@ function Toggle() {
 
   return (
     <div>
-      <div className="pomodoro">
+      <div
+        className="pomodoro"
+        onClick={function () {
+          setIsOn(!isOn);
+        }}
+      >
         <div>🍅</div>
         <div className="middle">
           <div>Pomodoro</div>
@@ -21,14 +26,34 @@ function Toggle() {
         </div>
       </div>
 
-      <button
+      {/* <button
         onClick={function () {
           setIsOn(!isOn);
         }}
       >
         {" "}
         Change{" "}
+      </button> */}
+    </div>
+  );
+}
+
+function FocusMode() {
+  let isOpen = true;
+  return (
+    <div>
+      <button>
+        👤
+        <br />
+        Focus
       </button>
+      {isOpen && (
+        <div className="focus-dialog">
+          <h1>Focus Mode</h1>
+          <Toggle />
+          <button>Start Focusing</button>
+        </div>
+      )}
     </div>
   );
 }
@@ -36,7 +61,8 @@ function Toggle() {
 export default function C5(props) {
   return (
     <div>
-      <Toggle />
+      {/* <Toggle /> */}
+      <FocusMode />
     </div>
   );
 }

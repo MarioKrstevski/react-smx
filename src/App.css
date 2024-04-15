@@ -70,4 +70,12 @@
 
   width: 500px;
   height: 400px;
+  opacity: 1;
+  transform: all 1s ease-in-out;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
 }

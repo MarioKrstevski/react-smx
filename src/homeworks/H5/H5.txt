@@ -1,0 +1,85 @@
+H5: Deadline 23 April (7 Days)
+Upload it with commit "H4 Done"
+
+1. Make a component <Lightbulb /> that will be used to turn on/off a lightbulb. The JSX should look like
+this.
+
+<div>
+    <img src="" alt="" />
+    <button>On</button>
+</div>
+
+where the text On/Off changes as well as the src attribute between these two urls
+
+https://www.shutterstock.com/image-vector/incandescent-light-bulb-lightbulb-turned-600nw-522240046.jpg
+
+https://i.pngimg.me/thumb/f/720/m2K9A0A0K9m2G6Z5.jpg
+
+
+-----
+
+2. Make the same component as above <Lightbulb2/> but this time, we dont have the button, we click on the
+image to change it to the next state
+
+-----
+
+3. Make a show password text input component. <Password /> which has an input and a button. 
+The button should switch  between "Hide/Show password" and the input  type should change between "text" and "password"
+
+
+-----
+
+4. Make a component called <TodoItem /> which takes in one prop `todo` which is an object. You should use
+the prop to make the initial state of the state. If the todo is completed cross the text if not, its like normal.
+To invoke the action you should click on the text field itself.
+
+const todo = {
+    text: "Do Homework",
+    completed: "false"
+}
+
+output: 
+
+<div> <span> Do Homework </span> </div>
+-----
+
+5. Make a component <BigSmallBox /> that will represent a `div` element that is a Box shaped (equal sides).
+Play with the width and heigth. 
+Clicking on the box changes it to the next shape. The box can be in two sizes: big and small
+Small box is 50px
+Big box is 100px
+
+-----
+
+6. Make a component <Box /> that will represent a `div` element that is box shaped (equal sides)
+
+Play with the width and heigth. 
+Clicking on the box changes it to the next shape, box can be in three sizes. big, normal and small
+Small box is 50px
+Normal box is 100px
+Big box is 150px
+
+-----
+
+7. Make a keyboard (part of it) component <Keyboard /> that takes a list of characters as a prop called `chars`.
+
+chars=["a", "b", "c", "d", " "]
+
+- chars is always lowercase letters and only letters.
+- You will have to add one space button by yourself at the end.
+- Make a component <Key /> that takes a prop `char` and displays a button with the char as value.
+- When clicked the button from `Key` should have visible change when clicked (play with css active class)
+- Normal button should be white background and black text, active button should be black bg and white text
+- ex: <Key char="m" /> will become <button> m </button> (class and event will need to be added)
+- for the space button it should be: <Key char=" " /> -----> <button> Space </button>
+- `Keyboard` should return a `div` for displaying the written text and `Key` component for each char in the chars list.
+- When we click the Key's button it should add the text onto the screen (in the div).
+- Add a "clear" button that will reset the text back to empty.
+
+8. Keyboard2 (task 7 but with extra features), 
+Extra: (if you are going to )
+- Make a CapsLock button, that can be turned on and off, the text should always be "Caps Lock". 
+When it is on it needs to have the 'active' state when it is off it is a 'normal' button (the css from before for normal/active).
+- When we click on Key to type, if capslock is active then the letter should be a capital letter otherwise
+always lowercase.
+- You should probably modify the `Key` component for this to be able to happen

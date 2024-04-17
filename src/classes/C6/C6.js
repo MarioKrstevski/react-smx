@@ -6,7 +6,9 @@ export default function C6(props) {
   return (
     <div>
       C6 works
-      <ArrayState /> <ObjectState /> <FormState />
+      <ArrayState />
+      {/* <ObjectState />
+        <FormState /> */}
     </div>
   );
 }

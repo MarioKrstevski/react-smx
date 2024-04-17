@@ -7,7 +7,7 @@ Uncontrolled
 import React from "react";
 
 export default function FormState(props) {
-  const [name, setName] = React.useState("prepopulated");
+  const [name, setName] = React.useState("");
 
   return (
     <div>
@@ -19,7 +19,9 @@ export default function FormState(props) {
       >
         <input
           value={name}
+          placeholder="+38978443221"
           onChange={function (event) {
+            // allows only letter 'm' to be viable for input
             // if (event.target.value.at(-1) === "m") {
             //   setName(event.target.value);
             // }

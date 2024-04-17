@@ -16,7 +16,11 @@ export default function ArrayState(props) {
     <Bold key={element} />
   ));
 
-  let boldArray = [<Bold />, <Bold />, <Bold />];
+  let boldArray = [
+    <Bold key={1} />,
+    <Bold key={2} />,
+    <Bold key={3} />,
+  ];
 
   let people = [
     { name: "John", surname: "Dog" },

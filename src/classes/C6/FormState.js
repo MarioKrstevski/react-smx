@@ -8,6 +8,10 @@ import React from "react";
 
 export default function FormState(props) {
   const [name, setName] = React.useState("");
+  const [sname, setaName] = React.useState("");
+  const [aname, setfName] = React.useState("");
+  const [addname, segtName] = React.useState("");
+  const [cname, setNhame] = React.useState("");
 
   return (
     <div>
@@ -29,6 +33,8 @@ export default function FormState(props) {
             setName(event.target.value);
           }}
         />
+
+        <input type="checkbox" name="" id="" onChecked />
 
         <button>Submit</button>
       </form>

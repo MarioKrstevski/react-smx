@@ -131,13 +131,9 @@ function Numbers() {
     //   ...numbers.slice(randomIndex + 1, numbers.length),
     // ];
 
-    const newNumbers = numbers.filter((number, index) => {
-      if (index !== randomIndex) {
-        return true;
-      } else {
-        return false;
-      }
-    });
+    const newNumbers = numbers.filter(
+      (number, index) => index !== randomIndex
+    );
 
     console.log(numbers, newNumbers);
     setNumbers(newNumbers);
@@ -178,3 +174,12 @@ export default function C6(props) {
 // .filter(item => item !== deleteElement)
 
 // [1, 2, 3, 4]
+
+let items = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+  20,
+];
+
+let paginationNumber = 5;
+let currentPage = 1;
+let showedItems = [1, 2, 3];

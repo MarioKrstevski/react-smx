@@ -264,3 +264,8 @@ const todos = [
 
 
 -----
+
+
+style={ {
+  color: todo.complete ? "red" : "blue"
+}}

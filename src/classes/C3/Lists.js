@@ -24,7 +24,7 @@ function uuid() {
   return randomString;
 }
 
-console.log(uuid());
+// console.log(uuid());
 
 function List(props) {
   // usually we don't want strings but we want components generated from the strings (data)

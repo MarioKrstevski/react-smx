@@ -79,3 +79,17 @@
   opacity: 0;
   display: none;
 }
+
+button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button.active {
+  background-color: black;
+  color: white;
+}

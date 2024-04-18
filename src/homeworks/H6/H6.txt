@@ -1,0 +1,85 @@
+H6: Deadline 25 April (7 Days)
+Upload it with the commit message "H6 Done"
+
+First 3 are required. If you can't do some requirement or it is confusing
+feel free to contact me or interpret it on your own choice.
+
+0. Practicing for speed
+
+I won't mark this, this is for you to get up to speed for typing arrays
+Write at least 10 array syntax components, each time always create a new 
+component so you can practice that as well. 
+
+Take a list of items and render them as a list with .map
+- create state for the list
+- for each item add an empty onClick function
+- for each item add a button next to it for deleting
+- for each item add a random class on it based on Math.random() with values
+"lucky" or "unlucky"
+
+Prompts for chatgpt: 
+"Give me arrays with items so i can practice my .map syntax, give me arrays from simple to a bit more complex structure. "
+
+This will give you arrays to practice with. As it again to give you new values to try again
+
+
+
+1. Create an input field and make it a controlled component. 
+It should have the attribute name={"grocery"}. 
+*Use the value and onChange attributes*
+----
+
+2. Adding to an Array
+
+- Create a simple React component `Groceries` that allows users to add items to an array.
+
+- Start off with an empty array state called `groceries`. It will hold a list of items 
+we need to buy (groceries). Groceries will be just an array of strings.
+ex: ["egg","syrup","cigarettes"]
+
+- Use the previous task's input component to use it as a way to add new items
+- Next to the input, create a button  with the text (Add) that will be used
+to add items into the list
+
+- Add an onClick handler to get the value from text input state and add it into the array state.
+
+- Make a check to see if tha value is not empty before adding it, we don't want to add an empty string
+- After an item was added, reset the input state to an empty string again.
+- Make sure to treat lowercase and uppercase the same. "Egg" and "egg" should be the same thing
+
+Bonus:
+* Make sure that we are not duplicating two items. If the string already exists, show an alert with
+a message saying that it exists already
+
+----
+
+3. Remove item
+
+- Next to each item from of the previous task add a delete button, (<button>X<button/>)
+- When we click the button we want to delete the item from the list
+
+Bonus:
+* Limit the user to be able to only delete 10 times. If he tries to delete more than that
+show an alert and prevent the deletion. (hint: use a different state to keep track of delete attempts)
+
+4. More Change and Limits
+
+- Add a maximum limit of 14 items in the groceries array.
+- Add another button next to the delete button, for marking something as Done, onClick
+we should mark an grocery as done. This means that we should move it into another array state
+called `completed`. (remove from groceries and add to completed).
+- Display the completed list under the groceries list.
+- Once an item is in the completed it cannot be removed or changed
+- Add a timestamp for when the item was completed (ex: Egg - 12.04.2024 08:44), this basically
+means just add the time as a string at the end of the item string.
+- Limit so when user tries to add a grocery it should also not exist in the completed array state
+
+Changes*
+* Instead of combining "Egg - 12.04.2024 08:44" as a string, make the second array `completed`
+to be made from objects {name:"Egg", boughtAt: "12.04.2024 08:44"}, the boughtAt value can be 
+of any type, doesn't have to be a string (a date, keep the time and date separate maybe, use timestamp maybe)
+
+* Limit again when user tries to add a new grocery to only add it if it is missing in `groceries`
+or it is missing from `completed`, except if 2 days have passed since it was bought.
+
+ex: so if egg was bought on 12.04.2024. next earliest time we can add an egg to the list again is 14.04.2024

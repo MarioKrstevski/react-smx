@@ -9,9 +9,9 @@ import LoginForm from "./LoginForm";
 export default function C7(props) {
   return (
     <div>
-      <ColorPicker />
-      {/* <LoginForm /> */}
+      {/* <ColorPicker /> */}
       {/* <CurrencyCalculator /> */}
+      <LoginForm />
     </div>
   );
 }

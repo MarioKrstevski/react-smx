@@ -1,0 +1,36 @@
+H7: Deadline 29 April (7 Days)
+Upload it with the commit message "H7 Done"
+
+topics: useRef + controled inputs
+
+
+
+1. Recreate this (https://codepen.io/Hoovian/pen/mdgpadP). Make a component FakeSignUp.
+
+- At the end when clicking submit, you should pass the data to the `processData` function.
+You can find the function in the H7.js file. Explore it to see how the data is expected
+to look like.
+
+- Based on the return value of the function, show the error / success message under
+the submit button.
+
+- Make sure that people can only try to submit a bad form maximum 6 times. If someone reaches
+the 6 failed attempts, show a new message "You are banned from submitting again" and make the 
+submit button disabled.
+
+Hints: 
+
+- before you try solving figure out which are the moving parts (state)
+- break down the task into mini tasks and do as much as you can
+- try to think what will need to be in state and what doesn't need to be and can be used by useRef
+- try to solve each part that you can, and if you get stuck write down a short note
+which part is hard to accomplish and how you tried to solve it (i will read these later)
+- use good variable state names and add comments explaining parts of the code 
+
+Extra: 
+
+- Replace the checkboxes with a dropdown (select).
+
+
+
+

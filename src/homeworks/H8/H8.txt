@@ -1,5 +1,5 @@
-H7: Deadline 29 April (7 Days)
-Upload it with the commit message "H7 Done"
+H8: Deadline 30 April (7 Days)
+Upload it with the commit message "H8 Done"
 
 topics: useEffect
 

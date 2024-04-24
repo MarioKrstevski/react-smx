@@ -6,6 +6,7 @@ function Game() {
 
     return function () {
       // document.title = `New App`;
+      // window.open("https://www.google.com");
     };
   }, []);
   return <div>game</div>;
@@ -43,6 +44,7 @@ export default function DocumentTitle(props) {
         on/off
       </button>
       {isGamePlaying && <Game />}
+      {/* {isGamePlaying ? <Game /> : null} */}
       DocumentTitle works
       <br />
       Notifications

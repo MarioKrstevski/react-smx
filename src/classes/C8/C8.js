@@ -10,9 +10,9 @@ export default function C8(props) {
   return (
     <div>
       C8 works
-      <DocumentTitle />
+      {/* <DocumentTitle /> */}
       {/* <UseEffectRules /> */}
-      {/* <EventListener /> */}
+      <EventListener />
       {/* <Timer /> */}
       {/* <DataFetching /> */}
       {/* <Test /> */}

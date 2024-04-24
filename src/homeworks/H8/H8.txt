@@ -1,0 +1,65 @@
+H7: Deadline 29 April (7 Days)
+Upload it with the commit message "H7 Done"
+
+topics: useEffect
+
+0. Not an exercise but I added a component Flow, both in C8 and in H8,
+render it and see how is the order of console.log() to understand the 
+flow of react.
+
+Also there is an image hook-flow.png that explains the order as well
+
+1. Make a component Countdown that will take a prop input `seconds`
+which should be a number, the number of seconds to coundown.
+
+Its the opposite of a timer, each second you decrease by one and when it reaches 0
+it should stop and display a message Done. 
+Also apply the class .shake to the message div, it is provided in style.css file
+
+2. Make a component Sunset, your job is to lower the sun (y) position so that it 
+goes down. I already wrote the component JSX and classes
+
+Take a look at it and make the sun go down
+
+- When half of the sun is not visible add the class `golden` 
+- When 75% of the sun is not visible add the class redish
+- When the sun disappears stop the movement of the sun (it should not go down forever)
+
+3. Make a component Comments. In the beginning it should show a spinner and after the comments
+load show them as a list of comments (ul > li)
+
+api url (https://jsonplaceholder.typicode.com/comments)
+
+Use the 'name' and 'body' from the comments and style
+the comments just a bit with inline css,
+
+CSS inspiration, look on left side just use the name and body (https://dribbble.com/shots/7307532-Comment-Feed-UI-Elements)
+
+4. Make a component Colorful, which displays a text "Sometimes I change colors".
+- It should have two states: color and counter.
+- The text should be clickable, when we click on it you update the counter
+- If the counter value is divisble by 3 it should change the text color (do it with useEffect)
+
+here are some functions to generate the color and counter increment (its not +1 its gonna be + randomIncrement())
+
+function randomIncrement() {
+  return Math.floor(Math.random() * 9) + 1;
+}
+
+function randomHexColor() {
+  // Generate three random integers between 0 and 255
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+
+  // Convert the RGB values to hexadecimal format
+  const hexR = r.toString(16).padStart(2, '0'); // padStart ensures at least two digits
+  const hexG = g.toString(16).padStart(2, '0');
+  const hexB = b.toString(16).padStart(2, '0');
+
+  // Concatenate the hex values
+  const hexColor = '#' + hexR + hexG + hexB;
+
+  return hexColor;
+}
+

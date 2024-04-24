@@ -1,0 +1,68 @@
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-2px);
+  }
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    transform: translateX(2px);
+  }
+}
+
+.shake {
+  animation: shake 1s infinite alternate;
+  background: white;
+  border: 2px solid green;
+  color: green;
+  padding: 8px 6px;
+  display: inline-block;
+}
+
+.canvas {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.sky {
+  height: 350px;
+  background-color: lightblue;
+}
+.sea {
+  height: 80px;
+  background-color: blue;
+  z-index: 2;
+}
+.sand {
+  height: 170px;
+  background-color: sandybrown;
+  z-index: 2;
+}
+.sun {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: yellow;
+}
+
+.golden {
+  background-color: gold;
+}
+.redish {
+  background-color: firebrick;
+}

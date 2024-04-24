@@ -1,8 +1,20 @@
 import { useEffect, useState } from "react";
 
+function AirCon() {
+  useEffect(() => {
+    console.log("start");
+
+    return function () {
+      console.log("stop aircondinoing");
+    };
+  }, []);
+  return <div>20C</div>;
+}
+
 export default function UseEffectRules(props) {
   const [counter, setCounter] = useState(0);
   const [counter2, setCounter2] = useState(0);
+  const [isInside, setIsInside] = useState(true);
   console.log("1");
 
   useEffect(function () {
@@ -13,8 +25,16 @@ export default function UseEffectRules(props) {
   useEffect(function () {
     console.log("only once");
     // setup
+    // aircondinoing.start();
     // chat.connect()
     // videostream.connect()
+
+    return function () {
+      console.log("state changed");
+      //   chat.disconnect()
+      //   videstream.end()
+      //   aircondinoing.end();
+    };
   }, []);
 
   useEffect(
@@ -26,11 +46,11 @@ export default function UseEffectRules(props) {
   );
 
   //effect description
-  useEffect(() => {
-    if (timer % 60) {
-      showAdd();
-    }
-  }, [timer]);
+  //   useEffect(() => {
+  //     if (timer % 60) {
+  //       showAdd();
+  //     }
+  //   }, [timer]);
 
   console.log("3");
 
@@ -52,6 +72,16 @@ export default function UseEffectRules(props) {
       >
         {counter2}
       </button>
+      <br />
+      <br />
+      <button
+        onClick={function () {
+          setIsInside(!isInside);
+        }}
+      >
+        Enter/Leave
+      </button>
+      {isInside && <AirCon />}
     </div>
   );
 }

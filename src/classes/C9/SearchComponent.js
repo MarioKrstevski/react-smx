@@ -49,6 +49,7 @@ const SearchComponent = () => {
   };
 
   const fetchData = async (searchQuery) => {
+    console.log(searchQuery);
     // Fetch data from API based on search query
     // Update searchResults state
   };

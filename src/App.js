@@ -9,6 +9,7 @@ import C5 from "./classes/C5/C5";
 import C6 from "./classes/C6/C6";
 import C7 from "./classes/C7/C7";
 import C8 from "./classes/C8/C8";
+import C9 from "./classes/C9/C9";
 import { celebrity_names } from "./data/constants";
 
 function UL({ items, title = "Default Title" }) {
@@ -62,7 +63,8 @@ function App() {
       {/* <C5 /> */}
       {/* <C6 /> */}
       {/* <C7 /> */}
-      <C8 />
+      {/* <C8 /> */}
+      <C9 />
       {/* {recipe.name} */}
       {/* Greek Salad */}
       {/* <Recipe

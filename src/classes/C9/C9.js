@@ -10,9 +10,9 @@ export default function C9(props) {
   return (
     <div>
       C9 works
-      <Carousel />
-      {/* <Listbox />
       <Tabs />
+      {/* <Carousel /> */}
+      {/* <Listbox />
       
       <Filter />
       <Todos />

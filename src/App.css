@@ -137,3 +137,14 @@ button.active {
   padding: 8px 6px;
   display: inline-block;
 }
+
+.mui button {
+  width: 30px;
+  height: 30px;
+}
+
+.mui-active {
+  font-weight: bold;
+  color: blue;
+  border: 2px solid blue;
+}

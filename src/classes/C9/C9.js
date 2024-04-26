@@ -10,14 +10,14 @@ export default function C9(props) {
   return (
     <div>
       C9 works
-      <Tabs />
+      <ToggleMUI />
       {/* <Carousel /> */}
+      <Tabs />
       {/* <Listbox />
       
       <Filter />
       <Todos />
       <br />
-      <ToggleMUI />
 
       <SearchComponent /> */}
     </div>

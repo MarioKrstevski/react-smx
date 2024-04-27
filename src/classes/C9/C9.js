@@ -5,23 +5,29 @@ import SearchComponent from "./SearchComponent";
 import Tabs from "./Tabs";
 import Todos from "./Todos";
 import ToggleMUI from "./ToggleMUI";
+import Groceries from "../../reviews/Sashka/Groceries";
+import Groceries2 from "../../reviews/Sashka/Groceries2";
+import Groceries2Changes from "../../reviews/Sashka/Groceries2Changes";
 
 export default function C9(props) {
   return (
     <div>
       C9 works
-      <SearchComponent />
+      {/* <SearchComponent /> */}
       {/* <Carousel /> */}
-      <Todos />
+      {/* <Filter /> */}
+      {/* <Todos /> */}
       {/* 
       <Listbox />
       <ToggleMUI />
       <Tabs />
       
-      <Filter />
       <br />
 
        */}
+      {/* <Groceries /> */}
+      <Groceries2 />
+      <Groceries2Changes />
     </div>
   );
 }

@@ -68,8 +68,10 @@ show an alert and prevent the deletion. (hint: use a different state to keep tra
 - Add another button next to the delete button, for marking something as Done, onClick
 we should mark an grocery as done. This means that we should move it into another array state
 called `completed`. (remove from groceries and add to completed).
+
 - Display the completed list under the groceries list.
 - Once an item is in the completed it cannot be removed or changed
+
 - Add a timestamp for when the item was completed (ex: Egg - 12.04.2024 08:44), this basically
 means just add the time as a string at the end of the item string.
 - Limit so when user tries to add a grocery it should also not exist in the completed array state

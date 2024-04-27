@@ -9,7 +9,7 @@ export default function Todos(props) {
     { id: 5, text: "Read a book", completed: false },
   ];
 
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(startTodos);
 
   function getData() {
     fetch("https://jsonplaceholder.typicode.com/todos")
@@ -29,7 +29,7 @@ export default function Todos(props) {
   }
 
   useEffect(function () {
-    getData();
+    // getData();
   }, []);
 
   function markDone(clickedId) {
@@ -87,6 +87,15 @@ export default function Todos(props) {
             </button>{" "}
           </li>
         ))}
+      </ul>
+      <h3>Completed</h3>
+      <ul>
+        {todos
+          .filter((t) => t.completed)
+          .map((t) => (
+            <li>{t.text}</li>
+          ))}
+        {todos.filter((t) => t.completed).length}
       </ul>
       {/* <form action="" onSubmit={e => {
         e.preventDefault()

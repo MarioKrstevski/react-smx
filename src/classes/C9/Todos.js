@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import useLSState from "../../hooks/useLSState";
 
 export default function Todos(props) {
   const startTodos = [
@@ -9,7 +10,12 @@ export default function Todos(props) {
     { id: 5, text: "Read a book", completed: false },
   ];
 
-  const [todos, setTodos] = useState(startTodos);
+  // const [todos, setTodos] = useState(
+  //   startLSTodos ? startLSTodos : startTodos
+  // );
+
+  const [todos, setTodos] = useLSState("todos", startTodos);
+  const [counter, setCounter] = useLSState("counter", 0);
 
   function getData() {
     fetch("https://jsonplaceholder.typicode.com/todos")
@@ -66,6 +72,7 @@ export default function Todos(props) {
 
   return (
     <div>
+      C:{counter}
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
@@ -93,7 +100,7 @@ export default function Todos(props) {
         {todos
           .filter((t) => t.completed)
           .map((t) => (
-            <li>{t.text}</li>
+            <li key={t.id}>{t.text}</li>
           ))}
         {todos.filter((t) => t.completed).length}
       </ul>

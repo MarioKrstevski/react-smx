@@ -1,8 +1,8 @@
 import { useState } from "react";
+import useWindowSize from "../../hooks/useWindowSize";
 
 export default function ToggleMUI(props) {
   const [selected, setSelected] = useState("bold");
-
   return (
     <div className="mui">
       <button

@@ -1,6 +1,7 @@
 import "./App.css";
 // import "./homeworks/H1/h1styles.css";
 import C1 from "./classes/C1/C1";
+import C10 from "./classes/C10/C10";
 import C2 from "./classes/C2/C2";
 import Cuips from "./classes/C2/Cuisp";
 import C3 from "./classes/C3/C3";
@@ -64,7 +65,8 @@ function App() {
       {/* <C6 /> */}
       {/* <C7 /> */}
       {/* <C8 /> */}
-      <C9 />
+      {/* <C9 /> */}
+      <C10 />
       {/* {recipe.name} */}
       {/* Greek Salad */}
       {/* <Recipe

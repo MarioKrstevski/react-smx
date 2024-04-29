@@ -1,8 +1,9 @@
 // context, custom hooks
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Todos from "../C9/Todos";
 import useWindowSize from "../../hooks/useWindowSize";
+import AuthContext from "../../context/AuthContext";
 
 function WindowSize(props) {
   const { width, height } = useWindowSize();
@@ -15,12 +16,27 @@ function WindowSize(props) {
   );
 }
 
-export default function C10(props) {
+function Child() {
+  // const name = useGlobalState(AuthContext);
+  const auth = useContext(AuthContext);
+  console.log(auth);
+
+  return (
+    <div>
+      {auth.isLoggedIn ? "logged in" : "not logged in"}
+
+      <button onClick={auth.signOut}>logout</button>
+    </div>
+  );
+}
+
+export default function C10() {
   return (
     <div>
       C10 works
-      <WindowSize />
-      <Todos />
+      {/* <WindowSize /> */}
+      {/* <Todos /> */}
+      <Child />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 // import "./homeworks/H1/h1styles.css";
 import C1 from "./classes/C1/C1";
@@ -11,6 +12,7 @@ import C6 from "./classes/C6/C6";
 import C7 from "./classes/C7/C7";
 import C8 from "./classes/C8/C8";
 import C9 from "./classes/C9/C9";
+import AuthContext from "./context/AuthContext";
 import { celebrity_names } from "./data/constants";
 
 function UL({ items, title = "Default Title" }) {
@@ -43,6 +45,7 @@ function App() {
     ingredients: ["tomatoes", "cucumber", "onion", "olives", "feta"],
     nov: "nov",
   };
+  const name = "Test";
 
   const copyRecipe = { ...recipe };
 
@@ -54,8 +57,27 @@ function App() {
   };
 
   // const name = "Greek Salad"
+  const [isLoggedIn, setisLoggedIn] = useState(false);
+  function signOut() {
+    setisLoggedIn(false);
+  }
   return (
     <div className="App">
+      <button
+        onClick={() => {
+          setisLoggedIn(true);
+        }}
+      >
+        login
+      </button>
+      <AuthContext.Provider
+        value={{
+          isLoggedIn: isLoggedIn,
+          signOut: signOut,
+        }}
+      >
+        <C10 name={name} />
+      </AuthContext.Provider>
       {/* <C1 /> */}
       {/* <Cuips /> */}
       {/* <C2 /> */}
@@ -66,7 +88,7 @@ function App() {
       {/* <C7 /> */}
       {/* <C8 /> */}
       {/* <C9 /> */}
-      <C10 />
+
       {/* {recipe.name} */}
       {/* Greek Salad */}
       {/* <Recipe

@@ -1,0 +1,33 @@
+H10: Deadline 08 May (6 Days)
+Upload it with the commit message "H10 Done"
+
+This homework is about making custom hooks and working with context
+
+
+Make/Recreate the following custom hooks. You can see how they are used
+and recreate them so that they can be used in the same way 
+(small modifications are ok if you cant exactly replicate).
+
+Hint: first solve the task without custom hook, for example make a 
+timer component, make a mouse movement detection component etc. and
+figure out which pieces of logic are connected and can be extracted into a 
+custom component.
+
+Also while submiting the homework, aside from the custom hook code, provide
+a basic example usecase where you are using the hook. You can use the same examples 
+that are used for showcase in the links
+
+1. useWindowScroll (https://mantine.dev/hooks/use-window-scroll/)
+
+2. useMouse (https://mantine.dev/hooks/use-mouse/)
+
+3. useEvent (https://mantine.dev/hooks/use-event-listener/)
+
+4. useTimer
+
+ const { time, isRunning, startTimer, stopTimer, resetTimer } = useTimer();
+
+5. useRenderCount (https://usehooks.com/userendercount)
+
+6. useIsFirstRender (https://usehooks.com/useisfirstrender)
+

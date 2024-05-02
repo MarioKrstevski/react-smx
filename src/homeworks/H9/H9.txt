@@ -1,0 +1,54 @@
+H9: Deadline 06 May (4 Days)
+Upload it with the commit message "H9 Done"
+
+This homework is about making custom components
+
+Recreate the components mentioned below, all you need is a 
+visual representation of them. Up to you to make it work. 
+
+Most have simple state and are focused on the visual.
+Feel free to create a .css file if you need to use styles to shape the components
+
+Click the toggle/expand full code to see how some props are expected to be used
+
+
+1. Basic Stepper (https://primereact.org/stepper/)
+
+Focus on the first example the basic one
+
+2. Basic Breadcrumb (https://primereact.org/breadcrumb/)
+
+3. Multiple Metergroup (https://primereact.org/metergroup/)
+
+Focus on the first and second example, the horisontal versions
+
+4. Make a custom component List, it will be used anytime we need to use a list (ol/ul)
+
+The goal of this component is to save us time from writing a simple .map() everytime there is an array
+
+It takes three props `items`, `field` and `type`. 
+* Items is always going to be an array, it can be an array of strings/numbers or array of objects
+* If it is an array of strings/numbers, then we don't need the `field` prop
+* The `field` prop is only needed for array with objects and it will specify which key will be used for display
+
+example: {title: "Book 1", author: "Stefan"} if the field={"title"} then we will use the "Book 1" value to put on the screen
+
+* the `type` value  by default will be "ul" but it can also be provided and either be "ul" or "ol" and depending on it 
+we should see an ordered list or unordered list. 
+* For keys, if its normal array (strings/numbers) we use the index as the key, if its array with objects and the objecst have a key "id",
+then we use the "id", otherwise we use the index again.
+
+The ui is simple, it will be just a ul > li with single text inside of it
+
+<ul>
+    <li> First item </li>
+    <li> Second item </li>
+    ...
+</ul>
+
+5. Choose another component you want to make, google "react ui libraries" explore some of them
+and choose a component you want to recreate it can be simple or complex up to you.
+
+Provide a link of the one you are going for.
+
+
